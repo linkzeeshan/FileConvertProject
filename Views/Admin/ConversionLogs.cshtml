@@ -80,9 +80,9 @@
                                             <a asp-action="ConversionDetails" asp-route-id="@conversion.Id" class="btn btn-sm btn-outline-primary">
                                                 <i class="fas fa-info-circle"></i>
                                             </a>
-                                            @if (conversion.Status == ConversionStatus.Completed)
+                                            @if (conversion.Status == ConversionStatus.Completed && !string.IsNullOrEmpty(conversion.ConvertedFilePath))
                                             {
-                                                <a asp-action="DownloadConversion" asp-route-id="@conversion.Id" class="btn btn-sm btn-outline-success">
+                                                <a asp-controller="Admin" asp-action="DownloadConvertedFile" asp-route-id="@conversion.Id" class="btn btn-sm btn-outline-success" title="Download Converted File">
                                                     <i class="fas fa-download"></i>
                                                 </a>
                                             }

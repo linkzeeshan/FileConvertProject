@@ -57,14 +57,41 @@ namespace FileConvertPro.Controllers
             {
                 var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
                 var conversionId = await _conversionService.ConvertFileAsync(file, conversionType, userId);
-                
-                TempData["SuccessMessage"] = "Your file has been uploaded and is being processed.";
-                return RedirectToAction(nameof(Details), new { id = conversionId });
+
+                // Attempt to retrieve the completed conversion for direct download
+                var conversion = await _conversionService.GetConversionByIdAsync(conversionId, userId);
+
+                if (conversion != null && conversion.Status == ConversionStatus.Completed && !string.IsNullOrEmpty(conversion.ConvertedFilePath))
+                {
+                    if (System.IO.File.Exists(conversion.ConvertedFilePath))
+                    {
+                        var fileBytes = await System.IO.File.ReadAllBytesAsync(conversion.ConvertedFilePath);
+                        _logger.LogInformation("Conversion ID {ConversionId} completed. Initiating direct download for user {UserId}.", conversionId, userId);
+                        return File(fileBytes, "application/octet-stream", conversion.ConvertedFileName);
+                    }
+                    else
+                    {
+                        _logger.LogError("Conversion ID {ConversionId} completed, but file not found at path {FilePath} for direct download.", conversionId, conversion.ConvertedFilePath);
+                        TempData["ErrorMessage"] = "Conversion completed, but the converted file was not found on the server. Please check details.";
+                        return RedirectToAction(nameof(Details), new { id = conversionId });
+                    }
+                }
+                else
+                {
+                    // If not immediately completed or path is missing, redirect to details page
+                    _logger.LogInformation("Conversion ID {ConversionId} processed. Status: {Status}. Redirecting to details page for user {UserId}.", conversionId, conversion?.Status, userId);
+                    TempData["SuccessMessage"] = "Your file has been processed. Check details below.";
+                    if (conversion == null) { // Should ideally not happen if ConvertFileAsync returns a valid ID
+                        TempData["ErrorMessage"] = "Conversion record could not be retrieved after processing.";
+                        return RedirectToAction(nameof(Index));
+                    }
+                    return RedirectToAction(nameof(Details), new { id = conversionId });
+                }
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error during file conversion: {Message}", ex.Message);
-                
+
                 // Provide more detailed error message to help diagnose the issue
                 string errorMessage = "An error occurred during file conversion: ";
                 

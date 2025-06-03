@@ -102,6 +102,12 @@ namespace FileConvertPro.Services
                 .ToListAsync();
         }
 
+        public async Task<FileConversion> GetConversionByIdForAdminAsync(int id)
+        {
+            return await _context.FileConversions
+                .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
         private async Task ProcessConversionAsync(FileConversion conversion)
         {
             try

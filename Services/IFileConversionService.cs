@@ -30,5 +30,12 @@ namespace FileConvertPro.Services
         /// <param name="userId">The ID of the user</param>
         /// <returns>A collection of file conversion records</returns>
         Task<IEnumerable<FileConversion>> GetUserConversionsAsync(string userId);
+
+        /// <summary>
+        /// Gets a file conversion by its ID for an administrator.
+        /// </summary>
+        /// <param name="id">The ID of the conversion.</param>
+        /// <returns>The file conversion record, or null if not found.</returns>
+        Task<FileConversion> GetConversionByIdForAdminAsync(int id);
     }
 }

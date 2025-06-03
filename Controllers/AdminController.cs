@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using FileConvertPro.Services;
 
 namespace FileConvertPro.Controllers
 {
@@ -16,15 +17,18 @@ namespace FileConvertPro.Controllers
         private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<AdminController> _logger;
+        private readonly IFileConversionService _fileConversionService;
 
         public AdminController(
             ApplicationDbContext context,
             UserManager<ApplicationUser> userManager,
-            ILogger<AdminController> logger)
+            ILogger<AdminController> logger,
+            IFileConversionService fileConversionService)
         {
             _context = context;
             _userManager = userManager;
             _logger = logger;
+            _fileConversionService = fileConversionService;
         }
 
         public async Task<IActionResult> Index()
@@ -141,6 +145,44 @@ namespace FileConvertPro.Controllers
                 _logger.LogError(ex, $"Error updating subscription for user ID {userId}");
                 TempData["ErrorMessage"] = "An error occurred while updating the subscription.";
                 return RedirectToAction(nameof(UserDetails), new { id = userId });
+            }
+        }
+
+        public async Task<IActionResult> DownloadConvertedFile(int id)
+        {
+            try
+            {
+                var conversion = await _fileConversionService.GetConversionByIdForAdminAsync(id);
+
+                if (conversion == null)
+                {
+                    _logger.LogWarning("Admin download attempt: Conversion with ID {ConversionId} not found.", id);
+                    TempData["ErrorMessage"] = "Conversion record not found.";
+                    return RedirectToAction(nameof(Conversions));
+                }
+
+                if (conversion.Status != ConversionStatus.Completed || string.IsNullOrEmpty(conversion.ConvertedFilePath))
+                {
+                    _logger.LogWarning("Admin download attempt: Conversion ID {ConversionId} is not completed or has no file path. Status: {Status}", id, conversion.Status);
+                    TempData["ErrorMessage"] = "File is not available for download (not completed or path missing).";
+                    return RedirectToAction(nameof(Conversions));
+                }
+
+                if (!System.IO.File.Exists(conversion.ConvertedFilePath))
+                {
+                    _logger.LogError("Admin download attempt: File not found at path {FilePath} for conversion ID {ConversionId}", conversion.ConvertedFilePath, id);
+                    TempData["ErrorMessage"] = "Converted file not found on server. It might have been moved or deleted.";
+                    return RedirectToAction(nameof(Conversions));
+                }
+
+                var fileBytes = await System.IO.File.ReadAllBytesAsync(conversion.ConvertedFilePath);
+                return File(fileBytes, "application/octet-stream", conversion.ConvertedFileName);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during admin download for conversion ID {ConversionId}", id);
+                TempData["ErrorMessage"] = "An error occurred while trying to download the file.";
+                return RedirectToAction(nameof(Conversions));
             }
         }
     }
