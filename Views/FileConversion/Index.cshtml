@@ -1,0 +1,98 @@
+@model IEnumerable<FileConvertPro.Models.FileConversion>
+
+@{
+    ViewData["Title"] = "My Conversions";
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h1><i class="fas fa-history me-2"></i> My Conversions</h1>
+            <p class="lead">View and manage your file conversion history</p>
+        </div>
+        <div class="col-md-4 text-md-end d-flex align-items-center justify-content-md-end">
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="fas fa-plus me-2"></i> New Conversion
+            </a>
+        </div>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info" role="alert">
+            <i class="fas fa-info-circle me-2"></i> You haven't converted any files yet. 
+            <a asp-action="Create" class="alert-link">Start your first conversion now</a>.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Original File</th>
+                        <th>Conversion Type</th>
+                        <th>Status</th>
+                        <th>Created</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.OriginalFileName</td>
+                            <td>
+                                <span class="badge bg-primary">@item.ConversionType.ToString()</span>
+                            </td>
+                            <td>
+                                @switch (item.Status)
+                                {
+                                    case ConversionStatus.Pending:
+                                        <span class="badge bg-warning text-dark">Pending</span>
+                                        break;
+                                    case ConversionStatus.Processing:
+                                        <span class="badge bg-info">Processing</span>
+                                        break;
+                                    case ConversionStatus.Completed:
+                                        <span class="badge bg-success">Completed</span>
+                                        break;
+                                    case ConversionStatus.Failed:
+                                        <span class="badge bg-danger">Failed</span>
+                                        break;
+                                }
+                            </td>
+                            <td>@item.CreatedAt.ToString("g")</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                    @if (item.Status == ConversionStatus.Completed)
+                                    {
+                                        <a asp-action="Download" asp-route-id="@item.Id" class="btn btn-sm btn-outline-success">
+                                            <i class="fas fa-download"></i>
+                                        </a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        // Auto-refresh for pending/processing conversions
+        $(document).ready(function() {
+            if ($('.badge.bg-warning, .badge.bg-info').length > 0) {
+                setTimeout(function() {
+                    location.reload();
+                }, 10000); // Refresh every 10 seconds if there are pending/processing conversions
+            }
+        });
+    </script>
+}

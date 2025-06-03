@@ -1,0 +1,441 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Hero Section -->
+<div class="container-fluid py-5 hero-section">
+    <div class="hero-bg-shape hero-bg-shape-1"></div>
+    <div class="hero-bg-shape hero-bg-shape-2"></div>
+    
+    <div class="container">
+        <div class="row align-items-center py-3">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <span class="badge bg-primary bg-gradient px-3 py-2 mb-3">Trusted by thousands</span>
+                <h1 class="display-4 fw-bold mb-4">Transform Your Files <span class="text-primary">Instantly</span></h1>
+                <p class="lead mb-4">FileConvertPro is your all-in-one solution for fast, secure, and high-quality file conversions. Convert documents, images, audio, and more with just a few clicks.</p>
+                
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="d-grid gap-3 d-md-flex">
+                        <a asp-controller="FileConversion" asp-action="Create" class="btn btn-primary btn-lg px-4 me-md-2">
+                            <i class="fas fa-exchange-alt me-2"></i> Convert Files
+                        </a>
+                        <a asp-controller="FileConversion" asp-action="History" class="btn btn-outline-secondary btn-lg px-4">
+                            <i class="fas fa-history me-2"></i> View History
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <div class="d-grid gap-3 d-md-flex">
+                        <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-primary btn-lg px-4 me-md-2">
+                            <i class="fas fa-user-plus me-2"></i> Sign Up Free
+                        </a>
+                        <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-outline-secondary btn-lg px-4">
+                            <i class="fas fa-sign-in-alt me-2"></i> Login
+                        </a>
+                    </div>
+                }
+                
+                <div class="mt-5">
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex me-4">
+                            <i class="fas fa-shield-alt text-primary me-2"></i>
+                            <span>Secure</span>
+                        </div>
+                        <div class="d-flex me-4">
+                            <i class="fas fa-bolt text-primary me-2"></i>
+                            <span>Fast</span>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            <span>High Quality</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <div class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle p-3 shadow">
+                        <i class="fas fa-file-pdf text-white fa-2x"></i>
+                    </div>
+                    <div class="position-absolute top-0 end-0 translate-middle bg-success rounded-circle p-3 shadow">
+                        <i class="fas fa-file-word text-white fa-2x"></i>
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 translate-middle bg-warning rounded-circle p-3 shadow">
+                        <i class="fas fa-file-image text-white fa-2x"></i>
+                    </div>
+                    <div class="position-absolute bottom-0 end-0 translate-middle bg-info rounded-circle p-3 shadow">
+                        <i class="fas fa-file-excel text-white fa-2x"></i>
+                    </div>
+                    <img src="/images/hero-image.jpg" alt="File Conversion" class="img-fluid rounded-3 shadow-lg" onerror="this.src='/images/placeholder-hero.jpg'; this.onerror='';"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Conversion Types Section -->
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <h2 class="display-5 fw-bold">Powerful <span class="text-primary">Conversion</span> Types</h2>
+            <p class="lead mb-4">Transform your files between formats with precision and ease</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        @if (ViewBag.ConversionTypes != null)
+        {
+            @foreach (var conversionType in ViewBag.ConversionTypes)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm conversion-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-gradient rounded-circle p-3 me-3">
+                                    <i class="fas fa-exchange-alt text-white"></i>
+                                </div>
+                                <h5 class="card-title mb-0">@conversionType.Name</h5>
+                            </div>
+                            <p class="card-text">@conversionType.Description</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-4 px-4">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a asp-controller="FileConversion" asp-action="Create" asp-route-conversionType="@conversionType.Type" class="btn btn-outline-primary">
+                                    <i class="fas fa-arrow-right me-1"></i> Convert Now
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-outline-primary">
+                                    <i class="fas fa-user-plus me-1"></i> Sign Up to Convert
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <!-- Fallback conversion types if ViewBag.ConversionTypes is null -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm conversion-card">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-file-image text-white"></i>
+                            </div>
+                            <h5 class="card-title mb-0">Image Conversion</h5>
+                        </div>
+                        <p class="card-text">Convert between various image formats including JPG, PNG, GIF, BMP, TIFF, and WebP with quality preservation.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-4 px-4">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="FileConversion" asp-action="Create" asp-route-conversionType="Image" class="btn btn-outline-primary">
+                                <i class="fas fa-arrow-right me-1"></i> Convert Now
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-outline-primary">
+                                <i class="fas fa-user-plus me-1"></i> Sign Up to Convert
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm conversion-card">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-file-pdf text-white"></i>
+                            </div>
+                            <h5 class="card-title mb-0">Document Conversion</h5>
+                        </div>
+                        <p class="card-text">Convert between document formats like PDF, DOCX, DOC, RTF, and TXT while maintaining formatting and structure.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-4 px-4">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="FileConversion" asp-action="Create" asp-route-conversionType="Document" class="btn btn-outline-primary">
+                                <i class="fas fa-arrow-right me-1"></i> Convert Now
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-outline-primary">
+                                <i class="fas fa-user-plus me-1"></i> Sign Up to Convert
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm conversion-card">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-table text-white"></i>
+                            </div>
+                            <h5 class="card-title mb-0">Spreadsheet Conversion</h5>
+                        </div>
+                        <p class="card-text">Convert between spreadsheet formats like XLSX, XLS, and CSV while preserving formulas, formatting, and data integrity.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-4 px-4">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="FileConversion" asp-action="Create" asp-route-conversionType="Spreadsheet" class="btn btn-outline-primary">
+                                <i class="fas fa-arrow-right me-1"></i> Convert Now
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-outline-primary">
+                                <i class="fas fa-user-plus me-1"></i> Sign Up to Convert
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    
+    <div class="text-center mt-4">
+        <a asp-controller="Home" asp-action="Features" class="btn btn-outline-primary btn-lg">
+            <i class="fas fa-star me-2"></i> View All Conversion Types
+        </a>
+    </div>
+</div>
+</div>
+
+<!-- Features Section -->
+<div class="container-fluid bg-light py-5 mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-5 fw-bold">Why Choose <span class="text-primary">FileConvertPro</span>?</h2>
+                <p class="lead">Our platform is designed with your needs in mind</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm feature-card">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon-bg rounded-circle mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-primary fa-2x"></i>
+                        </div>
+                        <h4 class="card-title h5 mb-3">Secure & Private</h4>
+                        <p class="card-text">Your files are encrypted during transit and automatically deleted after conversion. We prioritize your privacy and data security.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm feature-card">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon-bg rounded-circle mx-auto mb-4">
+                            <i class="fas fa-bolt text-primary fa-2x"></i>
+                        </div>
+                        <h4 class="card-title h5 mb-3">Fast & Efficient</h4>
+                        <p class="card-text">Our advanced conversion engine ensures quick processing and high-quality output for all file formats.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm feature-card">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon-bg rounded-circle mx-auto mb-4">
+                            <i class="fas fa-cloud text-primary fa-2x"></i>
+                        </div>
+                        <h4 class="card-title h5 mb-3">Cloud-Based</h4>
+                        <p class="card-text">Access your conversion history from anywhere. No software installation required, just a web browser.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm feature-card">
+                    <div class="card-body p-4 text-center">
+                        <div class="feature-icon-bg rounded-circle mx-auto mb-4">
+                            <i class="fas fa-cogs text-primary fa-2x"></i>
+                        </div>
+                        <h4 class="card-title h5 mb-3">Advanced Options</h4>
+                        <p class="card-text">Fine-tune your conversions with custom settings like quality, resolution, and compression levels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- How It Works Section -->
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-12 text-center mb-5">
+            <h2 class="display-5 fw-bold">How It <span class="text-primary">Works</span></h2>
+            <p class="lead">Converting files has never been easier</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="step-number">1</div>
+                        <h4 class="mt-4 mb-3">Upload Your File</h4>
+                        <p>Select a file from your device or cloud storage. We support files up to 200MB for premium users.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="step-number">2</div>
+                        <h4 class="mt-4 mb-3">Choose Format</h4>
+                        <p>Select your desired output format and customize conversion settings if needed.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="step-number">3</div>
+                        <h4 class="mt-4 mb-3">Download Result</h4>
+                        <p>Once conversion is complete, download your converted file or save it to cloud storage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="container-fluid bg-light py-5 mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <span class="badge bg-primary-subtle text-primary mb-2">Testimonials</span>
+                <h2 class="display-5 fw-bold">What Our <span class="text-primary">Users</span> Say</h2>
+                <p class="lead">Trusted by thousands of satisfied users worldwide</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm testimonial-card">
+                    <div class="card-body p-4">
+                        <div class="testimonial-quote"><i class="fas fa-quote-left text-primary opacity-25 fa-2x"></i></div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text mb-4 testimonial-text">"FileConvertPro saved me hours of work. I needed to convert multiple PDFs to Word documents, and it handled them perfectly, preserving all formatting and images. The batch processing feature is a game-changer for our team."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="testimonial-avatar bg-primary text-white d-flex align-items-center justify-content-center">
+                                <span>JD</span>
+                            </div>
+                            <div class="ms-3">
+                                <h5 class="mb-0 fw-bold">John Doe</h5>
+                                <small class="text-muted">Marketing Director, TechCorp</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm testimonial-card">
+                    <div class="card-body p-4">
+                        <div class="testimonial-quote"><i class="fas fa-quote-left text-primary opacity-25 fa-2x"></i></div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text mb-4 testimonial-text">"As a graphic designer, I need to convert between image formats constantly. FileConvertPro is now my go-to tool for all my conversion needs. The image quality retention is exceptional, and the WebP conversion options have improved our website performance."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="testimonial-avatar bg-success text-white d-flex align-items-center justify-content-center">
+                                <span>JS</span>
+                            </div>
+                            <div class="ms-3">
+                                <h5 class="mb-0 fw-bold">Jane Smith</h5>
+                                <small class="text-muted">Senior Designer, CreativeStudio</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm testimonial-card">
+                    <div class="card-body p-4">
+                        <div class="testimonial-quote"><i class="fas fa-quote-left text-primary opacity-25 fa-2x"></i></div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                        </div>
+                        <p class="card-text mb-4 testimonial-text">"The batch conversion feature saved our team so much time. We had hundreds of files to convert, and FileConvertPro handled it effortlessly. The cloud storage integration makes it easy to process files directly from our shared drives."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="testimonial-avatar bg-info text-white d-flex align-items-center justify-content-center">
+                                <span>RJ</span>
+                            </div>
+                            <div class="ms-3">
+                                <h5 class="mb-0 fw-bold">Robert Johnson</h5>
+                                <small class="text-muted">IT Manager, GlobalCorp</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="#" class="btn btn-outline-primary">
+                <i class="fas fa-comments me-2"></i> Read More Testimonials
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <div class="card bg-primary text-white shadow-lg border-0 rounded-3">
+                <div class="card-body p-5 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Ready to Transform Your Files?</h2>
+                    <p class="lead mb-4">Join thousands of satisfied users who trust FileConvertPro for their file conversion needs.</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="FileConversion" asp-action="Create" class="btn btn-light btn-lg px-5">
+                                <i class="fas fa-exchange-alt me-2"></i> Start Converting Now
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-light btn-lg px-5">
+                                <i class="fas fa-user-plus me-2"></i> Create Free Account
+                            </a>
+                            <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-outline-light btn-lg px-5">
+                                <i class="fas fa-sign-in-alt me-2"></i> Login
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

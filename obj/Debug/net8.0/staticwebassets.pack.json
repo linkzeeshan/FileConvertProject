@@ -1,0 +1,321 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FileConvertPro.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FileConvertPro.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\images\\placeholder-hero.jpg",
+      "PackagePath": "staticwebassets\\images\\placeholder-hero.jpg"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\093b3681-f373-49fc-b041-d9ef9ff04c3c_PACCS_1.mdb",
+      "PackagePath": "staticwebassets\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\093b3681-f373-49fc-b041-d9ef9ff04c3c_PACCS_1.mdb"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\14bd66f2-6788-48b4-80ab-79662f8a1be2_PACCS_1 (1).mdb",
+      "PackagePath": "staticwebassets\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\14bd66f2-6788-48b4-80ab-79662f8a1be2_PACCS_1 (1).mdb"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\231d7438-056b-4461-8c8c-972c7f74a9b7_PACCS_1 (1).mdb",
+      "PackagePath": "staticwebassets\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\231d7438-056b-4461-8c8c-972c7f74a9b7_PACCS_1 (1).mdb"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\53742e0d-871e-4c29-9679-11b3919882a6_PACCS_1.mdb",
+      "PackagePath": "staticwebassets\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\53742e0d-871e-4c29-9679-11b3919882a6_PACCS_1.mdb"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\72f713a3-cba0-47ca-b9f2-e0e4e1e3df63_PACCS_1.mdb",
+      "PackagePath": "staticwebassets\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\72f713a3-cba0-47ca-b9f2-e0e4e1e3df63_PACCS_1.mdb"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\92fa6765-6bc8-41b6-9d68-6ee0d88f2b48_PACCS_1.mdb",
+      "PackagePath": "staticwebassets\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\92fa6765-6bc8-41b6-9d68-6ee0d88f2b48_PACCS_1.mdb"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\9e438534-dc9e-49c5-ba95-4d1edbc9e506_PACCS_1.mdb",
+      "PackagePath": "staticwebassets\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\9e438534-dc9e-49c5-ba95-4d1edbc9e506_PACCS_1.mdb"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\a708d1b6-6651-4555-929d-b7220aea08bf_PACCS_1.mdb",
+      "PackagePath": "staticwebassets\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\a708d1b6-6651-4555-929d-b7220aea08bf_PACCS_1.mdb"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\e9dca0cc-a9f6-418a-b7da-eed06f307c51_PACCS_1.mdb",
+      "PackagePath": "staticwebassets\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\e9dca0cc-a9f6-418a-b7da-eed06f307c51_PACCS_1.mdb"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\ff186676-10a7-49e3-bcb3-c79d3995d0d1\\205ad390-52d9-4262-a5c7-b34e748ad1de_PACCS_1.mdb",
+      "PackagePath": "staticwebassets\\uploads\\ff186676-10a7-49e3-bcb3-c79d3995d0d1\\205ad390-52d9-4262-a5c7-b34e748ad1de_PACCS_1.mdb"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\ff186676-10a7-49e3-bcb3-c79d3995d0d1\\596d76dc-3100-4076-836b-a3d4da61631a_PACCS_1.mdb",
+      "PackagePath": "staticwebassets\\uploads\\ff186676-10a7-49e3-bcb3-c79d3995d0d1\\596d76dc-3100-4076-836b-a3d4da61631a_PACCS_1.mdb"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\ff186676-10a7-49e3-bcb3-c79d3995d0d1\\769182d0-ca89-435d-9b5c-38e931a626a8_PACCS_1.mdb",
+      "PackagePath": "staticwebassets\\uploads\\ff186676-10a7-49e3-bcb3-c79d3995d0d1\\769182d0-ca89-435d-9b5c-38e931a626a8_PACCS_1.mdb"
+    },
+    {
+      "Id": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\ff186676-10a7-49e3-bcb3-c79d3995d0d1\\7715ad24-8e5e-4095-b2fc-e456046fe0b4_PACCS_1.mdb",
+      "PackagePath": "staticwebassets\\uploads\\ff186676-10a7-49e3-bcb3-c79d3995d0d1\\7715ad24-8e5e-4095-b2fc-e456046fe0b4_PACCS_1.mdb"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FileConvertPro.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.FileConvertPro.props",
+      "PackagePath": "build\\FileConvertPro.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.FileConvertPro.props",
+      "PackagePath": "buildMultiTargeting\\FileConvertPro.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.FileConvertPro.props",
+      "PackagePath": "buildTransitive\\FileConvertPro.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

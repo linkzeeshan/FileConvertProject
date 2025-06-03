@@ -1,0 +1,91 @@
+@model FileConvertPro.Models.ManageSubscriptionViewModel
+
+@{
+    ViewData["Title"] = "Manage Subscription";
+    Layout = "_AdminLayout";
+}
+
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Manage User Subscription</h1>
+        <a asp-controller="Admin" asp-action="UserDetails" asp-route-id="@Model.UserId" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+            <i class="fas fa-arrow-left fa-sm text-white-50 me-1"></i> Back to User Details
+        </a>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-8 col-lg-10">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Subscription Details for @Model.Email</h6>
+                </div>
+                <div class="card-body">
+                    <div class="mb-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6 class="font-weight-bold">Current Subscription</h6>
+                                <p class="mb-1">
+                                    <span class="badge @(Model.CurrentSubscriptionTier == FileConvertPro.Models.SubscriptionTier.Free ? "bg-secondary" : 
+                                                        Model.CurrentSubscriptionTier == FileConvertPro.Models.SubscriptionTier.Basic ? "bg-info" : 
+                                                        Model.CurrentSubscriptionTier == FileConvertPro.Models.SubscriptionTier.Premium ? "bg-warning" : "bg-danger")">
+                                        @Model.CurrentSubscriptionTier.ToString()
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="font-weight-bold">End Date</h6>
+                                <p>
+                                    @if (Model.CurrentSubscriptionEndDate.HasValue)
+                                    {
+                                        @Model.CurrentSubscriptionEndDate.Value.ToShortDateString()
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">N/A</span>
+                                    }
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="mb-4" />
+
+                    <form asp-action="ManageSubscription" method="post">
+                        <input type="hidden" asp-for="UserId" />
+                        <input type="hidden" asp-for="Email" />
+                        
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                        
+                        <div class="form-floating mb-3">
+                            <select asp-for="NewSubscriptionTier" class="form-select" asp-items="Html.GetEnumSelectList<FileConvertPro.Models.SubscriptionTier>()"></select>
+                            <label asp-for="NewSubscriptionTier"></label>
+                            <span asp-validation-for="NewSubscriptionTier" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="form-floating mb-4">
+                            <input asp-for="SubscriptionMonths" class="form-control" placeholder="Subscription Months" />
+                            <label asp-for="SubscriptionMonths"></label>
+                            <span asp-validation-for="SubscriptionMonths" class="text-danger"></span>
+                            <div class="form-text">Number of months for the subscription (if not Free tier)</div>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i>
+                            Users with paid subscriptions will automatically get Admin rights. Free tier users will only have Customer rights.
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-2"></i>Update Subscription
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

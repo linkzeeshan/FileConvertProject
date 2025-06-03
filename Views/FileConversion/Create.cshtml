@@ -1,0 +1,133 @@
+@model FileConvertPro.Models.FileConversionViewModel
+
+@{
+    ViewData["Title"] = "Convert File";
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1><i class="fas fa-exchange-alt me-2"></i> Convert File</h1>
+            <p class="lead">Upload a file and select your desired conversion type</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form asp-action="Create" enctype="multipart/form-data" method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+                        
+                        <div class="mb-4">
+                            <label asp-for="ConversionType" class="form-label fw-bold">Conversion Type</label>
+                            <select asp-for="ConversionType" class="form-select" required>
+                                <option value="">-- Select Conversion Type --</option>
+                                <option value="JpgToPng">JPG to PNG</option>
+                                <option value="PngToJpg">PNG to JPG</option>
+                                <option value="JpgToWebp">JPG to WebP</option>
+                                <option value="PngToWebp">PNG to WebP</option>
+                                <option value="WebpToJpg">WebP to JPG</option>
+                                <option value="WebpToPng">WebP to PNG</option>
+                                <option value="MdbToCsv">MDB to CSV</option>
+                                <option value="MdvToPdf">MDV to PDF</option>
+                                <option value="PdfToDocx">PDF to DOCX</option>
+                            </select>
+                            <span asp-validation-for="ConversionType" class="text-danger"></span>
+                            <div class="form-text">Choose the type of conversion you want to perform</div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label asp-for="File" class="form-label fw-bold">File to Convert</label>
+                            <div class="input-group">
+                                <input asp-for="File" type="file" class="form-control" required />
+                                <span asp-validation-for="File" class="text-danger"></span>
+                            </div>
+                            <div class="form-text">
+                                Maximum file size: 10MB. Supported file types depend on the conversion type selected.
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a asp-action="Index" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-2"></i> Back to List
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-exchange-alt me-2"></i> Convert File
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    <i class="fas fa-info-circle me-2"></i> Conversion Tips
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Make sure your file is not corrupted</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Check that your file matches the selected conversion type</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Files are automatically deleted after processing</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Larger files may take longer to process</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card shadow-sm">
+                <div class="card-header bg-light">
+                    <i class="fas fa-question-circle me-2"></i> Need Help?
+                </div>
+                <div class="card-body">
+                    <p>If you're having trouble with file conversion, check our <a href="#">FAQ</a> or <a href="#">contact support</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        // Dynamic file validation based on conversion type
+        $(document).ready(function() {
+            $('#ConversionType').change(function() {
+                var conversionType = $(this).val();
+                var fileInput = $('#File');
+                
+                // Reset file input
+                fileInput.val('');
+                
+                // Update accepted file types based on conversion type
+                switch(conversionType) {
+                    case 'JpgToPng':
+                    case 'JpgToWebp':
+                        fileInput.attr('accept', '.jpg,.jpeg');
+                        break;
+                    case 'PngToJpg':
+                    case 'PngToWebp':
+                        fileInput.attr('accept', '.png');
+                        break;
+                    case 'WebpToJpg':
+                    case 'WebpToPng':
+                        fileInput.attr('accept', '.webp');
+                        break;
+                    case 'MdbToCsv':
+                        fileInput.attr('accept', '.mdb');
+                        break;
+                    case 'MdvToPdf':
+                        fileInput.attr('accept', '.mdv');
+                        break;
+                    case 'PdfToDocx':
+                        fileInput.attr('accept', '.pdf');
+                        break;
+                    default:
+                        fileInput.attr('accept', '');
+                }
+            });
+        });
+    </script>
+}

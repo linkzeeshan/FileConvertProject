@@ -1,0 +1,160 @@
+@model FileConvertPro.Models.ContactFormModel
+
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card shadow-sm">
+                <div class="card-body p-5">
+                    <h1 class="display-5 fw-bold mb-4">@ViewData["Title"]</h1>
+                    <p class="lead mb-4">Have questions or need assistance? We're here to help!</p>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                                    <h3 class="h5 mb-3">Email Us</h3>
+                                    <p class="mb-3">For general inquiries and support</p>
+                                    <a href="mailto:support@fileconvertpro.com" class="btn btn-outline-primary">
+                                        support@fileconvertpro.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-phone-alt fa-3x text-primary mb-3"></i>
+                                    <h3 class="h5 mb-3">Call Us</h3>
+                                    <p class="mb-3">Monday-Friday, 9am-5pm EST</p>
+                                    <a href="tel:+15551234567" class="btn btn-outline-primary">
+                                        +1 (555) 123-4567
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5">
+                        <h2 class="h4 mb-4">Send Us a Message</h2>
+                        <div class="row">
+                            <div class="col-lg-12 mb-4">
+                                @if (TempData["SuccessMessage"] != null)
+                                {
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <i class="fas fa-check-circle me-2"></i> @TempData["SuccessMessage"]
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                }
+                                <form asp-action="Contact" asp-controller="Home" method="post">
+                                    @Html.AntiForgeryToken()
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label asp-for="Name" class="form-label">Name</label>
+                                            <input asp-for="Name" class="form-control" required>
+                                            <span asp-validation-for="Name" class="text-danger"></span>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label asp-for="Email" class="form-label">Email</label>
+                                            <input asp-for="Email" class="form-control" required>
+                                            <span asp-validation-for="Email" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label asp-for="Phone" class="form-label">Phone (optional)</label>
+                                            <input asp-for="Phone" class="form-control">
+                                            <span asp-validation-for="Phone" class="text-danger"></span>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label asp-for="Subject" class="form-label">Subject</label>
+                                            <input asp-for="Subject" class="form-control" required>
+                                            <span asp-validation-for="Subject" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label asp-for="Message" class="form-label">Message</label>
+                                        <textarea asp-for="Message" class="form-control" rows="5" required></textarea>
+                                        <span asp-validation-for="Message" class="text-danger"></span>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input asp-for="AgreeToPrivacyPolicy" class="form-check-input" required>
+                                        <label asp-for="AgreeToPrivacyPolicy" class="form-check-label">I agree to the <a href="/Home/Privacy">privacy policy</a> and consent to being contacted regarding my inquiry.</label>
+                                        <span asp-validation-for="AgreeToPrivacyPolicy" class="text-danger d-block"></span>
+                                    </div>
+                                    <div class="d-grid gap-2 d-md-flex">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5">
+                        <h2 class="h4 mb-4">Frequently Asked Questions</h2>
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        What file formats does FileConvertPro support?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        FileConvertPro supports a wide range of file formats including images (JPG, PNG, GIF, BMP), documents (PDF, DOCX, TXT), and more. We're constantly adding support for additional formats based on user feedback.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Is my data secure during the conversion process?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes, we take data security very seriously. All file uploads and downloads are encrypted using HTTPS. Your files are stored securely during the conversion process and are automatically deleted after conversion is complete or after 24 hours, whichever comes first.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        What are the subscription tiers and their benefits?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We offer three subscription tiers: Free, Standard, and Premium. The Free tier allows for basic conversions with size limitations. The Standard tier offers higher file size limits and priority processing. The Premium tier provides unlimited conversions, highest file size limits, priority processing, and access to all conversion types.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        How long does the conversion process take?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Conversion times vary depending on the file size, type, and current server load. Most conversions complete within seconds to a few minutes. Premium subscribers receive priority processing for faster conversions.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

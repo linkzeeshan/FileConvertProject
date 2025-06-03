@@ -1,0 +1,276 @@
+@model FileConvertPro.Models.AdminDashboardViewModel
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-tachometer-alt me-2"></i> Admin Dashboard</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-download fa-sm text-white-50 me-1"></i> Generate Report
+        </a>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Total Users</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalUsers</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-users fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Active Subscribers</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.ActiveSubscribers</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-user-check fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Total Conversions</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalConversions</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-exchange-alt fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Failed Conversions</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.FailedConversions</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Conversions and User Activity -->
+    <div class="row">
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Recent Conversions</h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                             aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">Actions:</div>
+                            <a class="dropdown-item" asp-action="ConversionLogs">View All Conversions</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Export to CSV</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    @if (Model.RecentConversions.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>File</th>
+                                        <th>Type</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var conversion in Model.RecentConversions)
+                                    {
+                                        <tr>
+                                            <td>@conversion.User.Email</td>
+                                            <td>@conversion.OriginalFileName</td>
+                                            <td>
+                                                <span class="badge bg-primary">@conversion.ConversionType.ToString()</span>
+                                            </td>
+                                            <td>
+                                                @switch (conversion.Status)
+                                                {
+                                                    case ConversionStatus.Pending:
+                                                        <span class="badge bg-warning text-dark">Pending</span>
+                                                        break;
+                                                    case ConversionStatus.Processing:
+                                                        <span class="badge bg-info">Processing</span>
+                                                        break;
+                                                    case ConversionStatus.Completed:
+                                                        <span class="badge bg-success">Completed</span>
+                                                        break;
+                                                    case ConversionStatus.Failed:
+                                                        <span class="badge bg-danger">Failed</span>
+                                                        break;
+                                                }
+                                            </td>
+                                            <td>@conversion.CreatedAt.ToString("g")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="text-center py-4">
+                            <i class="fas fa-exchange-alt fa-3x text-gray-300 mb-3"></i>
+                            <p class="text-muted">No conversions found</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Conversion Types Distribution</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                        <canvas id="conversionTypesChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-primary"></i> Image Conversions
+                        </span>
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-success"></i> Document Conversions
+                        </span>
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-info"></i> Database Conversions
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Recent User Registrations</h6>
+                </div>
+                <div class="card-body">
+                    @if (Model.RecentUsers.Any())
+                    {
+                        <div class="list-group">
+                            @foreach (var user in Model.RecentUsers)
+                            {
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">@user.Email</h6>
+                                        <small>@((DateTime.Now - user.CreatedAt).TotalDays < 1 ? "Today" : $"{(int)(DateTime.Now - user.CreatedAt).TotalDays}d ago")</small>
+                                    </div>
+                                    <p class="mb-1">
+                                        @(string.IsNullOrEmpty(user.FirstName) && string.IsNullOrEmpty(user.LastName) 
+                                            ? "No name provided" 
+                                            : $"{user.FirstName} {user.LastName}")
+                                    </p>
+                                    <small>
+                                        @switch (user.SubscriptionTier)
+                                        {
+                                            case SubscriptionTier.Free:
+                                                <span class="badge bg-secondary">Free</span>
+                                                break;
+                                            case SubscriptionTier.Basic:
+                                                <span class="badge bg-info">Basic</span>
+                                                break;
+                                            case SubscriptionTier.Premium:
+                                                <span class="badge bg-warning">Premium</span>
+                                                break;
+                                            case SubscriptionTier.Enterprise:
+                                                <span class="badge bg-danger">Enterprise</span>
+                                                break;
+                                        }
+                                    </small>
+                                </a>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="text-center py-4">
+                            <i class="fas fa-users fa-3x text-gray-300 mb-3"></i>
+                            <p class="text-muted">No recent registrations</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Pie Chart for Conversion Types
+        var ctx = document.getElementById("conversionTypesChart");
+        var myPieChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["Image Conversions", "Document Conversions", "Database Conversions"],
+                datasets: [{
+                    data: [@Model.ImageConversions, @Model.DocumentConversions, @Model.DatabaseConversions],
+                    backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
+                    hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+                    hoverBorderColor: "rgba(234, 236, 244, 1)",
+                }],
+            },
+            options: {
+                maintainAspectRatio: false,
+                tooltips: {
+                    backgroundColor: "rgb(255,255,255)",
+                    bodyFontColor: "#858796",
+                    borderColor: '#dddfeb',
+                    borderWidth: 1,
+                    xPadding: 15,
+                    yPadding: 15,
+                    displayColors: false,
+                    caretPadding: 10,
+                },
+                legend: {
+                    display: false
+                },
+                cutoutPercentage: 80,
+            },
+        });
+    </script>
+}

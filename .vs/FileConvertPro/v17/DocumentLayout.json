@@ -1,0 +1,224 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|c:\\users\\zakir\\cascadeprojects\\fileconvertpro\\services\\fileconversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|solutionrelative:services\\fileconversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|c:\\users\\zakir\\cascadeprojects\\fileconvertpro\\models\\fileconversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|solutionrelative:models\\fileconversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|c:\\users\\zakir\\cascadeprojects\\fileconvertpro\\controllers\\fileconversioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|solutionrelative:controllers\\fileconversioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|c:\\users\\zakir\\cascadeprojects\\fileconvertpro\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|c:\\users\\zakir\\cascadeprojects\\fileconvertpro\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|c:\\users\\zakir\\cascadeprojects\\fileconvertpro\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|c:\\users\\zakir\\cascadeprojects\\fileconvertpro\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|c:\\users\\zakir\\cascadeprojects\\fileconvertpro\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|c:\\users\\zakir\\cascadeprojects\\fileconvertpro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|c:\\users\\zakir\\cascadeprojects\\fileconvertpro\\views\\fileconversion\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|solutionrelative:views\\fileconversion\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|c:\\users\\zakir\\cascadeprojects\\fileconvertpro\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|c:\\users\\zakir\\cascadeprojects\\fileconvertpro\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}|FileConvertPro.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileConversion.cs",
+              "DocumentMoniker": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Models\\FileConversion.cs",
+              "RelativeDocumentMoniker": "Models\\FileConversion.cs",
+              "ToolTip": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Models\\FileConversion.cs",
+              "RelativeToolTip": "Models\\FileConversion.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAADwvzoAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T01:49:09.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FileConversionService.cs",
+              "DocumentMoniker": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Services\\FileConversionService.cs",
+              "RelativeDocumentMoniker": "Services\\FileConversionService.cs",
+              "ToolTip": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Services\\FileConversionService.cs",
+              "RelativeToolTip": "Services\\FileConversionService.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAIwIwAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T01:41:29.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAA0wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T00:39:43.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-02T00:19:26.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAADMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-01T22:38:47.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAwBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-01T21:59:40.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileConversionController.cs",
+              "DocumentMoniker": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Controllers\\FileConversionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FileConversionController.cs",
+              "ToolTip": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Controllers\\FileConversionController.cs",
+              "RelativeToolTip": "Controllers\\FileConversionController.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAnwDoAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T21:59:09.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAnwCgAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T20:50:07.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Views\\FileConversion\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\FileConversion\\Details.cshtml",
+              "ToolTip": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Views\\FileConversion\\Details.cshtml",
+              "RelativeToolTip": "Views\\FileConversion\\Details.cshtml",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAnwHAAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T20:45:16.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAIwBMAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T20:44:46.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAowAgAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T20:33:37.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAwwCQAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T20:33:16.766Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

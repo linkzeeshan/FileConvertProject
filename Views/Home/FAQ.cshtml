@@ -1,0 +1,532 @@
+@{
+    ViewData["Title"] = "Frequently Asked Questions";
+}
+
+<div class="container-fluid bg-light py-5">
+    <div class="container py-3">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <span class="badge bg-primary-subtle text-primary mb-2">Support</span>
+                <h1 class="display-5 fw-bold mb-3">Frequently Asked <span class="text-primary">Questions</span></h1>
+                <p class="lead">Find answers to the most common questions about FileConvertPro</p>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="fas fa-search text-primary"></i>
+                            </span>
+                            <input type="text" id="faqSearch" class="form-control border-start-0" placeholder="Search for questions..." aria-label="Search FAQs">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="faq-tabs mb-4">
+                            <ul class="nav nav-pills nav-fill" id="faqTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="general-tab" data-bs-toggle="pill" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="true">
+                                        <i class="fas fa-info-circle me-2"></i> General
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="conversion-tab" data-bs-toggle="pill" data-bs-target="#conversion" type="button" role="tab" aria-controls="conversion" aria-selected="false">
+                                        <i class="fas fa-exchange-alt me-2"></i> Conversion
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="security-tab" data-bs-toggle="pill" data-bs-target="#security" type="button" role="tab" aria-controls="security" aria-selected="false">
+                                        <i class="fas fa-shield-alt me-2"></i> Security
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="account-tab" data-bs-toggle="pill" data-bs-target="#account" type="button" role="tab" aria-controls="account" aria-selected="false">
+                                        <i class="fas fa-user-circle me-2"></i> Account
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="trouble-tab" data-bs-toggle="pill" data-bs-target="#trouble" type="button" role="tab" aria-controls="trouble" aria-selected="false">
+                                        <i class="fas fa-wrench me-2"></i> Troubleshooting
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-content" id="faqTabContent">
+                            <!-- General Questions Tab -->
+                            <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                                <div class="accordion" id="generalAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingGeneral1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral1" aria-expanded="false">
+                                        <i class="fas fa-question-circle text-primary me-2"></i> What is FileConvertPro?
+                                    </button>
+                                </h3>
+                                <div id="collapseGeneral1" class="accordion-collapse collapse" aria-labelledby="headingGeneral1" data-bs-parent="#generalAccordion">
+                                    <div class="accordion-body">
+                                        <p>FileConvertPro is a web-based file conversion service that allows you to convert files between different formats. Our platform supports a wide range of file types including images, documents, spreadsheets, presentations, and more.</p>
+                                        <p>We've designed our service to be intuitive, fast, and reliable, making file conversion accessible to everyone regardless of technical expertise.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingGeneral2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral2" aria-expanded="false">
+                                        <i class="fas fa-user-plus text-primary me-2"></i> Do I need to create an account to use FileConvertPro?
+                                    </button>
+                                </h3>
+                                <div id="collapseGeneral2" class="accordion-collapse collapse" aria-labelledby="headingGeneral2" data-bs-parent="#generalAccordion">
+                                    <div class="accordion-body">
+                                        <p>While we offer limited functionality to guests, creating a free account allows you to:</p>
+                                        <ul class="mb-3">
+                                            <li>Access your conversion history</li>
+                                            <li>Download converted files later</li>
+                                            <li>Use more conversion types</li>
+                                            <li>Convert larger files</li>
+                                        </ul>
+                                        <p>Premium features require a subscription. Check our <a asp-controller="Home" asp-action="Pricing" class="text-decoration-none">pricing page</a> for more details.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingGeneral3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral3" aria-expanded="false">
+                                        <i class="fas fa-globe text-primary me-2"></i> Is FileConvertPro available worldwide?
+                                    </button>
+                                </h3>
+                                <div id="collapseGeneral3" class="accordion-collapse collapse" aria-labelledby="headingGeneral3" data-bs-parent="#generalAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, FileConvertPro is available worldwide. Our servers are strategically located around the globe to provide fast conversion speeds regardless of your location.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            
+                    <!-- File Conversion Tab -->
+                    <div class="tab-pane fade" id="conversion" role="tabpanel" aria-labelledby="conversion-tab">
+                        <div class="accordion" id="conversionAccordion">
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingConversion1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConversion1" aria-expanded="false">
+                                        <i class="fas fa-file-alt text-primary me-2"></i> What file formats do you support?
+                                    </button>
+                                </h3>
+                                <div id="collapseConversion1" class="accordion-collapse collapse" aria-labelledby="headingConversion1" data-bs-parent="#conversionAccordion">
+                                    <div class="accordion-body">
+                                        <p>We support a wide range of formats including:</p>
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <div class="card border-0 shadow-sm mb-3">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-image text-primary me-2"></i> Images</h5>
+                                                        <p class="card-text">JPG, PNG, GIF, BMP, TIFF, WebP, SVG, ICO, HEIC</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card border-0 shadow-sm mb-3">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-file-word text-primary me-2"></i> Documents</h5>
+                                                        <p class="card-text">PDF, DOCX, DOC, RTF, TXT, HTML, ODT, EPUB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card border-0 shadow-sm mb-3">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-file-excel text-primary me-2"></i> Spreadsheets</h5>
+                                                        <p class="card-text">XLSX, XLS, CSV, ODS, TSV</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card border-0 shadow-sm">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-file-powerpoint text-primary me-2"></i> Presentations</h5>
+                                                        <p class="card-text">PPTX, PPT, ODP, KEY</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">We're constantly adding support for more formats based on user feedback. If you need a specific format that's not listed, please <a asp-controller="Home" asp-action="Contact" class="text-decoration-none">contact us</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingConversion2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConversion2" aria-expanded="false">
+                                        What is the maximum file size I can upload?
+                                    </button>
+                                </h3>
+                                <div id="collapseConversion2" class="accordion-collapse collapse" aria-labelledby="headingConversion2" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li><strong>Free tier:</strong> Up to 10MB per file</li>
+                                            <li><strong>Standard tier:</strong> Up to 50MB per file</li>
+                                            <li><strong>Premium tier:</strong> Up to 200MB per file</li>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingConversion3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConversion3" aria-expanded="false">
+                                        <i class="fas fa-clock text-primary me-2"></i> How long does conversion take?
+                                    </button>
+                                </h3>
+                                <div id="collapseConversion3" class="accordion-collapse collapse" aria-labelledby="headingConversion3" data-bs-parent="#conversionAccordion">
+                                    <div class="accordion-body">
+                                        <p>Most conversions complete within seconds, but processing time depends on several factors:</p>
+                                        <ul>
+                                            <li>File size and complexity</li>
+                                            <li>Current server load</li>
+                                            <li>Conversion type (some formats take longer to process)</li>
+                                        </ul>
+                                        <p class="mb-0">Premium users receive priority processing, which can significantly reduce conversion times during peak hours.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Security Tab -->
+                    <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+                        <div class="accordion" id="securityAccordion">
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingSecurity1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSecurity1" aria-expanded="false">
+                                        <i class="fas fa-shield-alt text-primary me-2"></i> Is my data secure when I use FileConvertPro?
+                                    </button>
+                                </h3>
+                                <div id="collapseSecurity1" class="accordion-collapse collapse" aria-labelledby="headingSecurity1" data-bs-parent="#securityAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, we take security very seriously. Our security measures include:</p>
+                                        <ul>
+                                            <li><strong>Encryption:</strong> All file transfers are encrypted using SSL/TLS</li>
+                                            <li><strong>Automatic deletion:</strong> Files are automatically deleted from our servers after 24 hours</li>
+                                            <li><strong>Isolated processing:</strong> Each conversion job runs in an isolated environment</li>
+                                            <li><strong>Regular audits:</strong> We conduct regular security audits of our systems</li>
+                                        </ul>
+                                        <p>We are compliant with GDPR and other privacy regulations. For more details, please review our <a asp-controller="Home" asp-action="Privacy" class="text-decoration-none">Privacy Policy</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingSecurity2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSecurity2" aria-expanded="false">
+                                        <i class="fas fa-trash-alt text-primary me-2"></i> Do you keep copies of my files?
+                                    </button>
+                                </h3>
+                                <div id="collapseSecurity2" class="accordion-collapse collapse" aria-labelledby="headingSecurity2" data-bs-parent="#securityAccordion">
+                                    <div class="accordion-body">
+                                        <p>No, we do not keep permanent copies of your files. Our file retention policy is as follows:</p>
+                                        <div class="card border-0 bg-light mb-3">
+                                            <div class="card-body">
+                                                <ul class="mb-0">
+                                                    <li><strong>Free users:</strong> Files are automatically deleted after 24 hours</li>
+                                                    <li><strong>Standard users:</strong> Files are automatically deleted after 24 hours</li>
+                                                    <li><strong>Premium users:</strong> Option to delete files immediately after conversion or keep for up to 7 days</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">You can manually delete your files at any time from your account dashboard.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingSecurity3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSecurity3" aria-expanded="false">
+                                        <i class="fas fa-user-shield text-primary me-2"></i> How do you protect my personal information?
+                                    </button>
+                                </h3>
+                                <div id="collapseSecurity3" class="accordion-collapse collapse" aria-labelledby="headingSecurity3" data-bs-parent="#securityAccordion">
+                                    <div class="accordion-body">
+                                        <p>We collect only the minimum information needed to provide our services. Your personal information is:</p>
+                                        <ul>
+                                            <li>Stored securely with industry-standard encryption</li>
+                                            <li>Never sold or shared with third parties for marketing purposes</li>
+                                            <li>Only used to provide and improve our services</li>
+                                            <li>Accessible to you at any time through your account settings</li>
+                                        </ul>
+                                        <p class="mb-0">You can request deletion of your account and all associated data at any time.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Account Tab -->
+                    <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">
+                        <div class="accordion" id="accountAccordion">
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingAccount1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccount1" aria-expanded="false">
+                                        <i class="fas fa-arrow-circle-up text-primary me-2"></i> How do I upgrade my account?
+                                    </button>
+                                </h3>
+                                <div id="collapseAccount1" class="accordion-collapse collapse" aria-labelledby="headingAccount1" data-bs-parent="#accountAccordion">
+                                    <div class="accordion-body">
+                                        <p>Upgrading your account is simple:</p>
+                                        <ol>
+                                            <li>Log in to your FileConvertPro account</li>
+                                            <li>Go to <strong>Account Settings</strong> in the user dropdown menu</li>
+                                            <li>Click on the <strong>Subscription</strong> tab</li>
+                                            <li>Select the plan that best suits your needs</li>
+                                            <li>Choose your preferred payment method and billing cycle</li>
+                                            <li>Complete the checkout process</li>
+                                        </ol>
+                                        <p>Your account will be upgraded immediately after payment is processed. We accept credit cards, PayPal, and other payment methods.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingAccount2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccount2" aria-expanded="false">
+                                        <i class="fas fa-credit-card text-primary me-2"></i> What payment methods do you accept?
+                                    </button>
+                                </h3>
+                                <div id="collapseAccount2" class="accordion-collapse collapse" aria-labelledby="headingAccount2" data-bs-parent="#accountAccordion">
+                                    <div class="accordion-body">
+                                        <p>We accept the following payment methods:</p>
+                                        <div class="row text-center mb-3">
+                                            <div class="col-4">
+                                                <div class="p-3">
+                                                    <i class="fab fa-cc-visa fa-3x mb-2"></i>
+                                                    <p>Visa</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="p-3">
+                                                    <i class="fab fa-cc-mastercard fa-3x mb-2"></i>
+                                                    <p>Mastercard</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="p-3">
+                                                    <i class="fab fa-cc-paypal fa-3x mb-2"></i>
+                                                    <p>PayPal</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">All payments are processed securely through our payment processor. We never store your full credit card details on our servers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingAccount3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccount3" aria-expanded="false">
+                                        <i class="fas fa-ban text-primary me-2"></i> Can I cancel my subscription at any time?
+                                    </button>
+                                </h3>
+                                <div id="collapseAccount3" class="accordion-collapse collapse" aria-labelledby="headingAccount3" data-bs-parent="#accountAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, you can cancel your subscription at any time:</p>
+                                        <ol>
+                                            <li>Log in to your FileConvertPro account</li>
+                                            <li>Go to <strong>Account Settings</strong> in the user dropdown menu</li>
+                                            <li>Click on the <strong>Subscription</strong> tab</li>
+                                            <li>Click on <strong>Cancel Subscription</strong></li>
+                                            <li>Confirm your cancellation</li>
+                                        </ol>
+                                        <div class="alert alert-info">
+                                            <i class="fas fa-info-circle me-2"></i> Your premium features will remain active until the end of your current billing period. We do not offer prorated refunds for partial months.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Troubleshooting Tab -->
+                    <div class="tab-pane fade" id="trouble" role="tabpanel" aria-labelledby="trouble-tab">
+                        <div class="accordion" id="troubleAccordion">
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingTrouble1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrouble1" aria-expanded="false">
+                                        <i class="fas fa-exclamation-triangle text-primary me-2"></i> My conversion failed. What should I do?
+                                    </button>
+                                </h3>
+                                <div id="collapseTrouble1" class="accordion-collapse collapse" aria-labelledby="headingTrouble1" data-bs-parent="#troubleAccordion">
+                                    <div class="accordion-body">
+                                        <p>If your conversion failed, please try these troubleshooting steps:</p>
+                                        <div class="card border-0 bg-light mb-3">
+                                            <div class="card-body">
+                                                <ol class="mb-0">
+                                                    <li>Check if your file is corrupted or password-protected</li>
+                                                    <li>Ensure your file is within the size limits for your account type</li>
+                                                    <li>Try a different browser or clear your browser cache</li>
+                                                    <li>Verify that your file format is supported for the desired conversion</li>
+                                                    <li>If converting images, try a different compression level</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">If the issue persists, please <a asp-controller="Home" asp-action="Contact" class="text-decoration-none">contact our support team</a> with details about the file you're trying to convert.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingTrouble2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrouble2" aria-expanded="false">
+                                        <i class="fas fa-download text-primary me-2"></i> I can't download my converted file. What's wrong?
+                                    </button>
+                                </h3>
+                                <div id="collapseTrouble2" class="accordion-collapse collapse" aria-labelledby="headingTrouble2" data-bs-parent="#troubleAccordion">
+                                    <div class="accordion-body">
+                                        <p>If you're having trouble downloading your converted file, check the following:</p>
+                                        <ul class="mb-3">
+                                            <li>Make sure your browser allows downloads from our site</li>
+                                            <li>Check if your download link has expired (links expire after 24 hours for free users)</li>
+                                            <li>Disable any download blockers or browser extensions that might interfere</li>
+                                            <li>Try using a different browser</li>
+                                            <li>Check your internet connection</li>
+                                        </ul>
+                                        <div class="alert alert-warning">
+                                            <i class="fas fa-info-circle me-2"></i> Download links expire after 24 hours for free users, 7 days for Standard users, and 30 days for Premium users.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingTrouble3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrouble3" aria-expanded="false">
+                                        <i class="fas fa-cog text-primary me-2"></i> The quality of my converted file is poor. How can I improve it?
+                                    </button>
+                                </h3>
+                                <div id="collapseTrouble3" class="accordion-collapse collapse" aria-labelledby="headingTrouble3" data-bs-parent="#troubleAccordion">
+                                    <div class="accordion-body">
+                                        <p>To improve the quality of your converted files:</p>
+                                        <ol>
+                                            <li><strong>Use advanced settings:</strong> When converting files, click on "Advanced Options" to access quality settings</li>
+                                            <li><strong>Choose the right format:</strong> Some formats preserve quality better than others (e.g., PNG vs. JPG for images)</li>
+                                            <li><strong>Upgrade your account:</strong> Premium users have access to higher quality conversion options</li>
+                                            <li><strong>Check your source file:</strong> The output quality is limited by the quality of your original file</li>
+                                        </ol>
+                                        <p class="mb-0">For specific recommendations based on your file type, please <a asp-controller="Home" asp-action="Contact" class="text-decoration-none">contact our support team</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact CTA Section -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <h2 class="h3 mb-4">Didn't find what you were looking for?</h2>
+            <p class="lead mb-4">Our support team is ready to help you with any questions you may have.</p>
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-primary btn-lg">
+                <i class="fas fa-envelope me-2"></i> Contact Us
+            </a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // FAQ Search Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('faqSearch');
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            const noResultsMessage = document.createElement('div');
+            noResultsMessage.className = 'alert alert-info mt-4';
+            noResultsMessage.innerHTML = '<i class="fas fa-info-circle me-2"></i> No matching questions found. Please try a different search term or <a href="/Home/Contact" class="alert-link">contact us</a> for assistance.';
+            noResultsMessage.style.display = 'none';
+            searchInput.parentNode.parentNode.appendChild(noResultsMessage);
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                let matchFound = false;
+                
+                // Show all tabs if search is empty
+                if (searchTerm === '') {
+                    document.querySelectorAll('.nav-link').forEach(tab => {
+                        tab.parentElement.style.display = 'block';
+                    });
+                    document.querySelectorAll('.tab-pane').forEach(pane => {
+                        pane.classList.remove('show', 'active');
+                    });
+                    document.querySelector('#general').classList.add('show', 'active');
+                    document.querySelector('#general-tab').classList.add('active');
+                    document.querySelector('#general-tab').setAttribute('aria-selected', 'true');
+                }
+                
+                accordionItems.forEach(item => {
+                    const question = item.querySelector('.accordion-button').textContent.toLowerCase();
+                    const answer = item.querySelector('.accordion-body').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        matchFound = true;
+                        
+                        // If searching, expand the item that matches
+                        if (searchTerm !== '') {
+                            // Find which tab this item belongs to
+                            const parentTabPane = item.closest('.tab-pane');
+                            const tabId = parentTabPane.id;
+                            
+                            // Activate the correct tab
+                            document.querySelectorAll('.nav-link').forEach(tab => {
+                                tab.classList.remove('active');
+                                tab.setAttribute('aria-selected', 'false');
+                            });
+                            document.querySelectorAll('.tab-pane').forEach(pane => {
+                                pane.classList.remove('show', 'active');
+                            });
+                            document.querySelector(`#${tabId}`).classList.add('show', 'active');
+                            document.querySelector(`#${tabId}-tab`).classList.add('active');
+                            document.querySelector(`#${tabId}-tab`).setAttribute('aria-selected', 'true');
+                            
+                            // Expand the accordion item
+                            const button = item.querySelector('.accordion-button');
+                            const collapseElement = item.querySelector('.accordion-collapse');
+                            
+                            if (button.classList.contains('collapsed')) {
+                                button.classList.remove('collapsed');
+                                button.setAttribute('aria-expanded', 'true');
+                                collapseElement.classList.add('show');
+                            }
+                        }
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                noResultsMessage.style.display = matchFound ? 'none' : 'block';
+            });
+        });
+    </script>
+}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

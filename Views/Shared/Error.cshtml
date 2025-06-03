@@ -1,0 +1,60 @@
+@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <div class="card shadow-sm border-0 rounded-lg">
+                <div class="card-body p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-exclamation-circle text-danger fa-5x"></i>
+                    </div>
+                    <h1 class="display-4 fw-bold text-danger mb-3">Oops!</h1>
+                    <h2 class="h4 mb-4">Something went wrong while processing your request.</h2>
+                    
+                    @if (Model.ShowRequestId)
+                    {
+                        <div class="alert alert-light d-inline-block mb-4">
+                            <small class="text-muted">
+                                <strong>Request ID:</strong> <code>@Model.RequestId</code>
+                            </small>
+                        </div>
+                    }
+                    
+                    <p class="mb-4">
+                        We apologize for the inconvenience. Our team has been notified of this issue and we're working to fix it.
+                    </p>
+                    
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg px-4 me-sm-3">
+                            <i class="fas fa-home me-2"></i> Return Home
+                        </a>
+                        <a href="javascript:history.back()" class="btn btn-outline-secondary btn-lg px-4">
+                            <i class="fas fa-arrow-left me-2"></i> Go Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            @if (Context.Request.Cookies.ContainsKey("ASPNETCORE_ENVIRONMENT") && 
+                 Context.Request.Cookies["ASPNETCORE_ENVIRONMENT"] == "Development")
+            {
+                <div class="card mt-4 shadow-sm border-0">
+                    <div class="card-header bg-warning text-dark">
+                        <i class="fas fa-code me-2"></i> Development Mode
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-0">
+                            <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
+                            It can result in displaying sensitive information from exceptions to end users.
+                            For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
+                            and restarting the app.
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

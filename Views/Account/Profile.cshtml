@@ -1,0 +1,111 @@
+@model FileConvertPro.Models.ProfileViewModel
+
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-user-circle me-2"></i>Account</h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a asp-action="Profile" class="list-group-item list-group-item-action active">
+                        <i class="fas fa-id-card me-2"></i>Profile
+                    </a>
+                    <a asp-action="ChangePassword" class="list-group-item list-group-item-action">
+                        <i class="fas fa-key me-2"></i>Change Password
+                    </a>
+                    <a asp-controller="FileConversion" asp-action="History" class="list-group-item list-group-item-action">
+                        <i class="fas fa-history me-2"></i>Conversion History
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card shadow-sm mt-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-crown me-2"></i>Subscription</h5>
+                </div>
+                <div class="card-body">
+                    <h6 class="mb-2">Current Plan</h6>
+                    @{
+                        string badgeClass = "bg-secondary";
+                        
+                        switch (Model.SubscriptionTier)
+                        {
+                            case SubscriptionTier.Basic:
+                                badgeClass = "bg-info";
+                                break;
+                            case SubscriptionTier.Premium:
+                                badgeClass = "bg-warning";
+                                break;
+                            case SubscriptionTier.Enterprise:
+                                badgeClass = "bg-danger";
+                                break;
+                        }
+                    }
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="badge @badgeClass me-2">@Model.SubscriptionTier.ToString()</span>
+                        @if (Model.SubscriptionTier != SubscriptionTier.Free && Model.SubscriptionEndDate.HasValue)
+                        {
+                            <small class="text-muted">
+                                Expires: @Model.SubscriptionEndDate.Value.ToShortDateString()
+                            </small>
+                        }
+                    </div>
+                    
+                    <a asp-controller="Home" asp-action="Pricing" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-arrow-up me-1"></i>Upgrade Plan
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-id-card me-2"></i>Profile Information</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Profile" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="FirstName" class="form-control" placeholder="First Name" />
+                                    <label asp-for="FirstName"></label>
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="LastName" class="form-control" placeholder="Last Name" />
+                                    <label asp-for="LastName"></label>
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-floating mb-4">
+                            <input asp-for="Email" class="form-control" placeholder="Email" readonly />
+                            <label asp-for="Email"></label>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-2"></i>Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
