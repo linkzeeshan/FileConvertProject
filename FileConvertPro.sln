@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
@@ -21,27 +20,3 @@ Global
 		{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
-=======
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileConvertPro", "FileConvertPro.csproj", "{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E15AE0A9-0D97-4CEA-AB0D-CE5E43D2CA62}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-EndGlobal
->>>>>>> 568e59911760930cde25107449e32b400486f92c
