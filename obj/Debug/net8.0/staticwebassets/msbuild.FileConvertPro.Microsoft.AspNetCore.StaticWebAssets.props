@@ -992,6 +992,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\00372251-ee4f-47ae-9d3f-404bad208f48\3402e1f0-1890-43d8-b7b3-1d3c77a32e3f_PACCS_1.mdb))">
+      <SourceType>Package</SourceType>
+      <SourceId>FileConvertPro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/FileConvertPro</BasePath>
+      <RelativePath>uploads/00372251-ee4f-47ae-9d3f-404bad208f48/3402e1f0-1890-43d8-b7b3-1d3c77a32e3f_PACCS_1.mdb</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\00372251-ee4f-47ae-9d3f-404bad208f48\3402e1f0-1890-43d8-b7b3-1d3c77a32e3f_PACCS_1.mdb))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\3871836a-ba13-4184-b0f3-c75d8119956b\093b3681-f373-49fc-b041-d9ef9ff04c3c_PACCS_1.mdb))">
       <SourceType>Package</SourceType>
       <SourceId>FileConvertPro</SourceId>

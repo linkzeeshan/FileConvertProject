@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UN+BsKs/E2cxNmeHFpo1i72F+Gz2qipfQOADrZk3+j4=",
+  "Hash": "FssP9Xyv7MqQRRwbrlkECXxbvb//29HPN+uOI95Bqnk=",
   "Source": "FileConvertPro",
   "BasePath": "_content/FileConvertPro",
   "Mode": "Default",
@@ -2352,6 +2352,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\00372251-ee4f-47ae-9d3f-404bad208f48\\3402e1f0-1890-43d8-b7b3-1d3c77a32e3f_PACCS_1.mdb",
+      "SourceId": "FileConvertPro",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\",
+      "BasePath": "_content/FileConvertPro",
+      "RelativePath": "uploads/00372251-ee4f-47ae-9d3f-404bad208f48/3402e1f0-1890-43d8-b7b3-1d3c77a32e3f_PACCS_1.mdb",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\00372251-ee4f-47ae-9d3f-404bad208f48\\3402e1f0-1890-43d8-b7b3-1d3c77a32e3f_PACCS_1.mdb"
     },
     {
       "Identity": "C:\\Users\\zakir\\CascadeProjects\\FileConvertPro\\wwwroot\\uploads\\3871836a-ba13-4184-b0f3-c75d8119956b\\093b3681-f373-49fc-b041-d9ef9ff04c3c_PACCS_1.mdb",
